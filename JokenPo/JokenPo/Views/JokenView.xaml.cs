@@ -7,6 +7,6 @@ public partial class JokenViewxaml : ContentPage
 	public JokenViewxaml()
 	{
 		InitializeComponent();
-		BindingContext = JokenViewModel();
+		BindingContext = new JokenViewModel();
 	}
 }

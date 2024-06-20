@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JokenPo.Views.JokenViewxaml"
+             Title="JokenViewxaml">
+    <VerticalStackLayout>
+       
+        <Image Source="{Binding ImagemOponente}" WidthRequest="100" HeightRequest="100" />
+
+        <Label Text="Pontuação Oponente: " FontSize="Medium" />
+        <Label Text="{Binding PontuacaoOponente}" FontSize="Medium" />
+
+        <Label Text="Pontuação Jogador: " FontSize="Large" />
+        <Label Text="{Binding PontuacaoJogador}" FontSize="Medium" />
+
+        <Label Text="{Binding Resultado}" FontSize="Large" HorizontalOptions="Center" />
+
+        <Picker Title="Selecione uma opção" SelectedItem="{Binding OpcaoEscolhida}">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>rock</x:String>
+                    <x:String>paper</x:String>
+                    <x:String>scissor</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button Text="Jogar" Command="{Binding FightCommand}" />
+    </VerticalStackLayout>
+</ContentPage>
